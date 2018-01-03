@@ -49,6 +49,11 @@ public class Practice01Translation extends RelativeLayout {
             @Override
             public void onClick(final View v) {
                 // TODO 在这里处理点击事件，通过 View.animate().translationX/Y/Z() 来让 View 平移
+                imageView.animate().translationX(dpToPixel(30));
+                imageView.animate().translationY(dpToPixel(30));
+                if (Build.VERSION.SDK_INT > 21) {
+                    imageView.animate().translationZ(dpToPixel(30));
+                }
             }
         });
     }
